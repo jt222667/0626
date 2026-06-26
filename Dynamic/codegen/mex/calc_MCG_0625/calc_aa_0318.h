@@ -22,11 +22,11 @@
 #include <string.h>
 
 /* Function Declarations */
-void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[11],
-                  real_T LP_num_q, const real_T LP_align[11],
-                  const real_T LP_BB[11], const real_T LP_Rp[90],
+void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[7],
+                  real_T LP_num_q, const real_T LP_align[7],
+                  const real_T LP_BB[7], const real_T LP_Rp[90],
                   const real_T LP_Rd[90], const real_T LP_RBcp[27],
-                  const real_T LP_T_L[160], const char_T LP_J_type[11],
-                  const real_T LP_SN[11], struct2_T *SV);
+                  const real_T LP_T_L[160], const char_T LP_J_type[7],
+                  const real_T LP_SN[7], struct2_T *SV);
 
 /* End of code generation (calc_aa_0318.h) */

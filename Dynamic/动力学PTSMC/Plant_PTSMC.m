@@ -29,7 +29,7 @@ sizes.DirFeedthrough = 0;
 sizes.NumSampleTimes = 1;
 sys = simsizes(sizes);
 
-CHOSEN = 5;
+CHOSEN = 1
 
 x0  = [0 0 0 0 0 0 0 0 0 0 0 0 0 0];
 x0(CHOSEN+7) = pi/2;
@@ -47,7 +47,7 @@ tau = u(1:7);
 
 [M_plant,C_plant,G_plant] = get_dynamics(LP, SV, q, qd);
 
-Dist = 1.1;
+Dist = 1.1
 
 qdd = Dist * M_plant \ (tau -  Dist * C_plant -  Dist * G_plant);
 sys = [qd; qdd];

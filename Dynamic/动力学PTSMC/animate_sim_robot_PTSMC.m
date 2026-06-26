@@ -16,13 +16,13 @@ function animate_sim_robot_PTSMC(varargin)
 %   animate_sim_robot_0625('ShowJointFrames', true, 'FrameScale', 0.08)
 %   animate_sim_robot_0625('OutputFile', 'robot_motion.mp4', 'FrameRate', 30)
 
-msg = ['update_', datestr(now,'mmdd_HH.MM')];
-filename = ['robot_motion_', msg, '.gif'];
+msg = ['update_', datestr(now,'mmdd_HHMM_SS')];
+filename = ['robot_motion_', msg, 's.gif'];
 
 opts.OutputFile = fullfile(fileparts(mfilename('fullpath')), filename);
 opts.FrameStep = [];
 opts.FrameRate = 30;
-opts.PlaybackSpeed = 5;
+opts.PlaybackSpeed = 1;
 opts.MaxFrames = 600;
 opts.LoopCount = 1;
 opts.TimeRange = [];
@@ -387,16 +387,11 @@ if ~isgraphics(fig, 'figure') || ~isgraphics(ax, 'axes')
     error('animate_sim_robot_0625:InvalidGraphicsHandle', ...
         'The animation figure or axes handle is no longer valid.');
 end
+
 drawnow;
-try
-    frame = getframe(ax);
-catch
-    if ~isgraphics(fig, 'figure')
-        error('animate_sim_robot_0625:InvalidFigureHandle', ...
-            'The animation figure was closed before getframe could capture it.');
-    end
-    frame = getframe(fig);
-end
+
+frame = getframe(fig);
+
 end
 
 function [fig, ax] = create_animation_axes(fig_visible)

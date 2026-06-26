@@ -38,10 +38,11 @@ if opts.ClearAxes
 end
 hold(ax, 'on'); grid(ax, 'on'); view(ax,[45 25]);
 axis(ax, 'equal');
+box on;
 xlabel(ax, 'X/m'); ylabel(ax, 'Y/m'); zlabel(ax, 'Z/m');
 title(ax, '机器人末端点三维分布（标注+相邻点连线）');
 
-% 绘制基座,基座接口点
+%% 绘制基座,基座接口点
 X_B = [];Y_B = [];Z_B = [];
 for i = 1:4
     R_base = SV.A0*LP.PBcp;
@@ -50,15 +51,82 @@ for i = 1:4
     z_base = SV.R0(3) + R_base(3,mod(i-1,3)+1);
     X_B = [X_B x_base];Y_B = [Y_B y_base];Z_B = [Z_B z_base];
 end
-plot3(ax, X_B, Y_B, Z_B, 'k',...
-    'LineWidth',2,'Marker','o','MarkerSize',4,'MarkerEdgeColor','k','MarkerFaceColor','none','DisplayName', '基座连接点');
-if opts.ShowText
-    for i = 1:3
-        text(ax, X_B(i)+0.02, Y_B(i)+0.02, Z_B(i)+0.02,sprintf('(%.3f,%.3f,%.3f) 接口%d',X_B(i),Y_B(i),Z_B(i),i),'FontSize',6, 'Color','k');
-    end
+scatter3(ax, X_B, Y_B, Z_B, 20, 'k', 'o', 'filled', 'DisplayName','基座连接点');
+
+% if opts.ShowText
+%     for i = 1:3
+%         text(ax, X_B(i)+0.02, Y_B(i)+0.02, Z_B(i)+0.02,sprintf('(%.3f,%.3f,%.3f) 接口%d',X_B(i),Y_B(i),Z_B(i),i),'FontSize',6, 'Color','k');
+%     end
+% end
+
+% ===== 绘制基座：5面封闭容器 =====
+O = SV.R0(:)';  % 基准原点
+% 顶点（按你给定）
+V = [
+    0.1,  0.2*sqrt(3),  0.2;
+   -0.1,  0.2*sqrt(3),  0.2;
+    0.1, -0.2*sqrt(3),  0.2;
+   -0.1, -0.2*sqrt(3),  0.2;
+    0.1,  0,          -0.2*sqrt(3);
+   -0.1,  0,          -0.2*sqrt(3);
+];
+V = V + O;  % 平移到基座位置
+% 面定义（5个面）
+F = [
+    1 2 4 3;
+    1 2 6 5;
+    2 4 6 6;
+    3 4 6 5;
+    1 3 5 5;
+];
+patch(ax, ...
+    'Vertices', V, ...
+    'Faces', F, ...
+    'FaceColor', [0.6 0.6 0.6], ...
+    'FaceAlpha', 0.5, ...
+    'EdgeColor', 'none', ...
+    'DisplayName', '基座容器');
+
+% ===== 正确无交错容器边 =====
+
+E_top = [
+    1 2;
+    2 4;
+    4 3;
+    3 1;
+];
+
+E_bottom = [
+    5 6;
+];
+
+% 关键：按 x 分组连接（避免交叉）
+E_side = [
+    1 5;
+    3 5;   % 右侧两个点 → 右下点5
+
+    2 6;
+    4 6;   % 左侧两个点 → 左下点6
+];
+
+E = [E_top; E_bottom; E_side];
+
+for i = 1:size(E,1)
+    plot3(ax, ...
+        [V(E(i,1),1), V(E(i,2),1)], ...
+        [V(E(i,1),2), V(E(i,2),2)], ...
+        [V(E(i,1),3), V(E(i,2),3)], ...
+        'k', 'LineWidth', 0.5);
+end
+for i = 1:size(E,1)
+    plot3(ax, ...
+        [V(E(i,1),1), V(E(i,2),1)], ...
+        [V(E(i,1),2), V(E(i,2),2)], ...
+        [V(E(i,1),3), V(E(i,2),3)], ...
+        'k', 'LineWidth', 0.5);
 end
 
-% 绘制节点，末端点
+%% 绘制节点，末端点
 for i = 1:SV.m
     x = [X_B(i) SV.RR(1, SV.Path{i}) SV.POS_e{i}(1)];
     y = [Y_B(i) SV.RR(2, SV.Path{i}) SV.POS_e{i}(2)];

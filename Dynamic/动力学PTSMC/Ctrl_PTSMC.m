@@ -39,11 +39,34 @@ q_D_dot_dot = zeros(7,1);
 q_A   = u(1:7);       % 实际关节位置
 q_A_dot  = u(8:14);   % 实际关节速度
 
-CHOSEN = 5;
+CHOSEN = 1
+
 A = pi/2;
 q_D(CHOSEN) = A *sin(t);
 q_D_dot(CHOSEN) = A *cos(t);
 q_D_dot_dot(CHOSEN) = -A *sin(t);
+
+
+A = pi/2;
+q_D(2) = A *sin(t);
+q_D_dot(2) = A *cos(t);
+q_D_dot_dot(2) = -A *sin(t);
+
+q_D(3) = A *sin(t);
+q_D_dot(3) = A *cos(t);
+q_D_dot_dot(3) = -A *sin(t);
+
+q_D(4) = A *sin(t);
+q_D_dot(4) = A *cos(t);
+q_D_dot_dot(4) = -A *sin(t);
+
+q_D(5) = A *sin(t);
+q_D_dot(5) = A *cos(t);
+q_D_dot_dot(5) = -A *sin(t);
+
+q_D(6) = A *sin(t);
+q_D_dot(6) = A *cos(t);
+q_D_dot_dot(6) = -A *sin(t);
 
 ptsmc_params = get_ptsmc_params(false);
 tau = calc_PTSMC_tau( ...
