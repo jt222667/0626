@@ -26,7 +26,7 @@ typedef struct {
 #ifndef typedef_cell_wrap_0
 #define typedef_cell_wrap_0
 typedef struct {
-  real_T f1[8];
+  real_T f1[11];
 } cell_wrap_0;
 #endif /* typedef_cell_wrap_0 */
 
@@ -43,24 +43,24 @@ typedef struct {
   real_T R0[3];
   real_T Q0[3];
   real_T A0[9];
-  real_T AA[72];
-  real_T RR[24];
+  real_T AA[99];
+  real_T RR[33];
   real_T v0[3];
   real_T w0[3];
   real_T vd0[3];
   real_T wd0[3];
-  real_T q[8];
-  real_T qd[8];
-  real_T qdd[8];
-  real_T vv[24];
-  real_T ww[24];
-  real_T vd[24];
-  real_T wd[24];
+  real_T q[11];
+  real_T qd[11];
+  real_T qdd[11];
+  real_T vv[33];
+  real_T ww[33];
+  real_T vd[33];
+  real_T wd[33];
   real_T F0[3];
   real_T T0[3];
-  real_T Fe[24];
-  real_T Te[24];
-  real_T tau[8];
+  real_T Fe[33];
+  real_T Te[33];
+  real_T tau[11];
   real_T m;
   cell_wrap_0 Path[1];
   cell_wrap_1 POS_e[1];
@@ -81,11 +81,11 @@ typedef struct {
 #ifndef typedef_struct0_T
 #define typedef_struct0_T
 typedef struct {
-  real_T module[8];
+  real_T module[11];
   real_T num_q;
-  real_T install[8];
-  real_T align[8];
-  real_T BB[8];
+  real_T install[11];
+  real_T align[11];
+  real_T BB[11];
   real_T Rp[90];
   real_T Rd[90];
   real_T Pp[30];
@@ -103,13 +103,13 @@ typedef struct {
   real_T module_COM_dist[12];
   real_T module_inertia_prox[36];
   real_T module_inertia_dist[36];
-  char_T J_type[8];
+  char_T J_type[11];
   real_T R_idx[30];
   real_T num_joint;
-  real_T S0[8];
-  real_T SN[8];
-  real_T SE[8];
-  real_T SS[64];
+  real_T S0[11];
+  real_T SN[11];
+  real_T SE[11];
+  real_T SS[121];
   struct1_T rb[7];
 } struct0_T;
 #endif /* typedef_struct0_T */

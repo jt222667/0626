@@ -6,7 +6,7 @@ ninja_required_version = 1.3
 root = .
 builddir = $root\build\win64
 matlabdir = F:\MATLAB\R2025b
-startdir = F:\Archive 归档\0625\Dynamic
+startdir = F:\Archive 归档\0626\Dynamic
 
 # Toolchain information
 cc = cl

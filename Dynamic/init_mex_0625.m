@@ -51,3 +51,11 @@ codegen -config cfg calc_MCG_0625 ...
     -report
 
 fprintf('Generated: %s\n', fullfile(this_dir, ['calc_MCG_0625_mex.', mexext]));
+
+
+%% PTSMC参数设置
+PTSMC_0625.T1 = 2;
+PTSMC_0625.T2 = 1;
+PTSMC_0625.Alpha = 0.5;
+PTSMC_0625.Beta = 0.5;
+PTSMC_0625.K = 0.2;

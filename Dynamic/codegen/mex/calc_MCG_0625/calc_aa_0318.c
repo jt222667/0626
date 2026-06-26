@@ -26,7 +26,7 @@ static emlrtRTEInfo
             9,              /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m" /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m" /* pName
                                                                          */
 };
 
@@ -37,7 +37,7 @@ static emlrtDCInfo
             33,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -52,7 +52,7 @@ static emlrtBCInfo
             "LP.RBcp",      /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -64,7 +64,7 @@ static emlrtDCInfo
             69,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -79,7 +79,7 @@ static emlrtBCInfo
             "LP.Rp",        /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -91,7 +91,7 @@ static emlrtDCInfo
             33,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -106,7 +106,7 @@ static emlrtBCInfo
             "LP.RBcp",      /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -118,7 +118,7 @@ static emlrtDCInfo
             74,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -133,7 +133,7 @@ static emlrtBCInfo
             "LP.T_L",       /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -145,7 +145,7 @@ static emlrtDCInfo
             32,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -160,7 +160,7 @@ static emlrtBCInfo
             "LP.Rd",        /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -172,7 +172,7 @@ static emlrtDCInfo
             81,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -187,7 +187,7 @@ static emlrtBCInfo
             "LP.Rp",        /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -199,7 +199,7 @@ static emlrtDCInfo
             32,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -214,7 +214,7 @@ static emlrtBCInfo
             "LP.Rd",        /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -226,7 +226,7 @@ static emlrtDCInfo
             86,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -241,7 +241,7 @@ static emlrtBCInfo
             "LP.T_L",       /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -253,7 +253,7 @@ static emlrtDCInfo
             48,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -268,7 +268,7 @@ static emlrtBCInfo
             "LP.Rp",        /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -280,7 +280,7 @@ static emlrtDCInfo
             53,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -295,7 +295,7 @@ static emlrtBCInfo
             "LP.T_L",       /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -304,13 +304,13 @@ static emlrtBCInfo
     t_emlrtBCI =
         {
             1,              /* iFirst */
-            8,              /* iLast */
+            11,             /* iLast */
             8,              /* lineNo */
             14,             /* colNo */
             "LP.BB",        /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -319,13 +319,13 @@ static emlrtBCInfo
     u_emlrtBCI =
         {
             1,              /* iFirst */
-            8,              /* iLast */
+            11,             /* iLast */
             15,             /* lineNo */
             39,             /* colNo */
             "LP.J_type",    /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -337,7 +337,7 @@ static emlrtDCInfo
             39,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -346,13 +346,13 @@ static emlrtBCInfo
     v_emlrtBCI =
         {
             1,              /* iFirst */
-            8,              /* iLast */
+            11,             /* iLast */
             25,             /* lineNo */
             39,             /* colNo */
             "LP.J_type",    /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -364,7 +364,7 @@ static emlrtDCInfo
             42,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -376,7 +376,7 @@ static emlrtDCInfo
             42,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -385,13 +385,13 @@ static emlrtBCInfo
     w_emlrtBCI =
         {
             1,              /* iFirst */
-            24,             /* iLast */
+            33,             /* iLast */
             24,             /* lineNo */
             38,             /* colNo */
             "SV.AA",        /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -403,7 +403,7 @@ static emlrtDCInfo
             38,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
@@ -412,13 +412,13 @@ static emlrtBCInfo
     x_emlrtBCI =
         {
             1,              /* iFirst */
-            24,             /* iLast */
+            33,             /* iLast */
             32,             /* lineNo */
             38,             /* colNo */
             "SV.AA",        /* aName */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             0 /* checkKind */
 };
@@ -430,18 +430,18 @@ static emlrtDCInfo
             38,             /* colNo */
             "calc_aa_0318", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Kinematic\\calc_aa_0318.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Kinematic\\calc_aa_0318.m", /* pName
                                                                           */
             1 /* checkKind */
 };
 
 /* Function Definitions */
-void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[8],
-                  real_T LP_num_q, const real_T LP_align[8],
-                  const real_T LP_BB[8], const real_T LP_Rp[90],
+void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[11],
+                  real_T LP_num_q, const real_T LP_align[11],
+                  const real_T LP_BB[11], const real_T LP_Rp[90],
                   const real_T LP_Rd[90], const real_T LP_RBcp[27],
-                  const real_T LP_T_L[160], const char_T LP_J_type[8],
-                  const real_T LP_SN[8], struct2_T *SV)
+                  const real_T LP_T_L[160], const char_T LP_J_type[11],
+                  const real_T LP_SN[11], struct2_T *SV)
 {
   static const int8_T iv[3] = {0, 0, 1};
   real_T A_0_i[9];
@@ -462,8 +462,8 @@ void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[8],
   for (b_i = 0; b_i < i; b_i++) {
     real_T d;
     if (((int32_T)((uint32_T)b_i + 1U) < 1) ||
-        ((int32_T)((uint32_T)b_i + 1U) > 8)) {
-      emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)b_i + 1U), 1, 8,
+        ((int32_T)((uint32_T)b_i + 1U) > 11)) {
+      emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)b_i + 1U), 1, 11,
                                     &t_emlrtBCI, (emlrtConstCTX)sp);
     }
     d = LP_BB[b_i];
@@ -707,8 +707,8 @@ void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[8],
           emlrtIntegerCheckR2012b(d, &m_emlrtDCI, (emlrtConstCTX)sp);
         }
         Cz_tmp_tmp = (int32_T)d;
-        if ((Cz_tmp_tmp < 1) || (Cz_tmp_tmp > 8)) {
-          emlrtDynamicBoundsCheckR2012b(Cz_tmp_tmp, 1, 8, &u_emlrtBCI,
+        if ((Cz_tmp_tmp < 1) || (Cz_tmp_tmp > 11)) {
+          emlrtDynamicBoundsCheckR2012b(Cz_tmp_tmp, 1, 11, &u_emlrtBCI,
                                         (emlrtConstCTX)sp);
         }
         if (LP_J_type[Cz_tmp_tmp - 1] == 'R') {
@@ -932,9 +932,9 @@ void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[8],
             if (e_Cz_tmp != (int32_T)e_Cz_tmp) {
               emlrtIntegerCheckR2012b(e_Cz_tmp, &p_emlrtDCI, (emlrtConstCTX)sp);
             }
-            b = ((e_Cz_tmp < 1.0) || (e_Cz_tmp > 24.0));
+            b = ((e_Cz_tmp < 1.0) || (e_Cz_tmp > 33.0));
             if (b) {
-              emlrtDynamicBoundsCheckR2012b((int32_T)e_Cz_tmp, 1, 24,
+              emlrtDynamicBoundsCheckR2012b((int32_T)e_Cz_tmp, 1, 33,
                                             &w_emlrtBCI, (emlrtConstCTX)sp);
             }
             A_0_i_tmp = (int32_T)e_Cz_tmp;
@@ -944,7 +944,7 @@ void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[8],
               emlrtIntegerCheckR2012b(e_Cz_tmp, &p_emlrtDCI, (emlrtConstCTX)sp);
             }
             if (b) {
-              emlrtDynamicBoundsCheckR2012b(A_0_i_tmp, 1, 24, &w_emlrtBCI,
+              emlrtDynamicBoundsCheckR2012b(A_0_i_tmp, 1, 33, &w_emlrtBCI,
                                             (emlrtConstCTX)sp);
             }
             A_0_i[3 * i2 + 1] = SV->AA[Cz_tmp_tmp + 1];
@@ -952,7 +952,7 @@ void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[8],
               emlrtIntegerCheckR2012b(e_Cz_tmp, &p_emlrtDCI, (emlrtConstCTX)sp);
             }
             if (b) {
-              emlrtDynamicBoundsCheckR2012b(A_0_i_tmp, 1, 24, &w_emlrtBCI,
+              emlrtDynamicBoundsCheckR2012b(A_0_i_tmp, 1, 33, &w_emlrtBCI,
                                             (emlrtConstCTX)sp);
             }
             A_0_i[3 * i2 + 2] = SV->AA[Cz_tmp_tmp + 2];
@@ -978,8 +978,8 @@ void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[8],
       }
       if (guard1 && (d != 0.0)) {
         A_0_i_tmp = (int32_T)d;
-        if ((A_0_i_tmp < 1) || (A_0_i_tmp > 8)) {
-          emlrtDynamicBoundsCheckR2012b(A_0_i_tmp, 1, 8, &v_emlrtBCI,
+        if ((A_0_i_tmp < 1) || (A_0_i_tmp > 11)) {
+          emlrtDynamicBoundsCheckR2012b(A_0_i_tmp, 1, 11, &v_emlrtBCI,
                                         (emlrtConstCTX)sp);
         }
         if (LP_J_type[A_0_i_tmp - 1] == 'L') {
@@ -1126,9 +1126,9 @@ void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[8],
             if (e_Cz_tmp != (int32_T)e_Cz_tmp) {
               emlrtIntegerCheckR2012b(e_Cz_tmp, &q_emlrtDCI, (emlrtConstCTX)sp);
             }
-            b = ((e_Cz_tmp < 1.0) || (e_Cz_tmp > 24.0));
+            b = ((e_Cz_tmp < 1.0) || (e_Cz_tmp > 33.0));
             if (b) {
-              emlrtDynamicBoundsCheckR2012b((int32_T)e_Cz_tmp, 1, 24,
+              emlrtDynamicBoundsCheckR2012b((int32_T)e_Cz_tmp, 1, 33,
                                             &x_emlrtBCI, (emlrtConstCTX)sp);
             }
             A_0_i_tmp = (int32_T)e_Cz_tmp;
@@ -1138,7 +1138,7 @@ void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[8],
               emlrtIntegerCheckR2012b(e_Cz_tmp, &q_emlrtDCI, (emlrtConstCTX)sp);
             }
             if (b) {
-              emlrtDynamicBoundsCheckR2012b(A_0_i_tmp, 1, 24, &x_emlrtBCI,
+              emlrtDynamicBoundsCheckR2012b(A_0_i_tmp, 1, 33, &x_emlrtBCI,
                                             (emlrtConstCTX)sp);
             }
             A_0_i[3 * i2 + 1] = SV->AA[Cz_tmp_tmp + 1];
@@ -1146,7 +1146,7 @@ void calc_aa_0318(const emlrtStack *sp, const real_T LP_module[8],
               emlrtIntegerCheckR2012b(e_Cz_tmp, &q_emlrtDCI, (emlrtConstCTX)sp);
             }
             if (b) {
-              emlrtDynamicBoundsCheckR2012b(A_0_i_tmp, 1, 24, &x_emlrtBCI,
+              emlrtDynamicBoundsCheckR2012b(A_0_i_tmp, 1, 33, &x_emlrtBCI,
                                             (emlrtConstCTX)sp);
             }
             A_0_i[3 * i2 + 2] = SV->AA[Cz_tmp_tmp + 2];

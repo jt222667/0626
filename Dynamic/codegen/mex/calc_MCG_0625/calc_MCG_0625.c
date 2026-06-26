@@ -25,14 +25,14 @@
 static emlrtRSInfo emlrtRSI = {
     21,              /* lineNo */
     "calc_MCG_0625", /* fcnName */
-    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m" /* pathName
+    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m" /* pathName
                                                                             */
 };
 
 static emlrtRSInfo b_emlrtRSI = {
     20,              /* lineNo */
     "calc_MCG_0625", /* fcnName */
-    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m" /* pathName
+    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m" /* pathName
                                                                             */
 };
 
@@ -43,7 +43,7 @@ static emlrtDCInfo
             6,               /* colNo */
             "calc_MCG_0625", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m", /* pName
                                                                          */
             1 /* checkKind */
 };
@@ -52,13 +52,13 @@ static emlrtBCInfo
     emlrtBCI =
         {
             1,               /* iFirst */
-            8,               /* iLast */
+            11,              /* iLast */
             19,              /* lineNo */
             6,               /* colNo */
             "SV.q",          /* aName */
             "calc_MCG_0625", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m", /* pName
                                                                          */
             3 /* checkKind */
 };
@@ -70,7 +70,7 @@ static emlrtDCInfo
             20,              /* colNo */
             "calc_MCG_0625", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m", /* pName
                                                                          */
             1 /* checkKind */
 };
@@ -85,7 +85,7 @@ static emlrtBCInfo
             "LP.R_idx",      /* aName */
             "calc_MCG_0625", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m", /* pName
                                                                          */
             0 /* checkKind */
 };
@@ -95,7 +95,7 @@ static emlrtECInfo emlrtECI = {
     19,              /* lineNo */
     1,               /* colNo */
     "calc_MCG_0625", /* fName */
-    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m" /* pName
+    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m" /* pName
                                                                             */
 };
 
@@ -109,7 +109,7 @@ static emlrtBCInfo
             "idx_q",         /* aName */
             "calc_MCG_0625", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m", /* pName
                                                                          */
             0 /* checkKind */
 };
@@ -118,7 +118,7 @@ static emlrtRTEInfo emlrtRTEI = {
     25,              /* lineNo */
     14,              /* colNo */
     "calc_MCG_0625", /* fName */
-    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m" /* pName
+    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m" /* pName
                                                                             */
 };
 
@@ -132,7 +132,7 @@ static emlrtBCInfo
             "idx_q",         /* aName */
             "calc_MCG_0625", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m", /* pName
                                                                          */
             0 /* checkKind */
 };
@@ -141,7 +141,7 @@ static emlrtRTEInfo b_emlrtRTEI = {
     26,              /* lineNo */
     14,              /* colNo */
     "calc_MCG_0625", /* fName */
-    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m" /* pName
+    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m" /* pName
                                                                             */
 };
 
@@ -155,7 +155,7 @@ static emlrtBCInfo
             "idx_q",         /* aName */
             "calc_MCG_0625", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m", /* pName
                                                                          */
             0 /* checkKind */
 };
@@ -164,7 +164,7 @@ static emlrtRTEInfo c_emlrtRTEI = {
     27,              /* lineNo */
     14,              /* colNo */
     "calc_MCG_0625", /* fName */
-    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m" /* pName
+    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m" /* pName
                                                                             */
 };
 
@@ -178,7 +178,7 @@ static emlrtBCInfo
             "idx_q",         /* aName */
             "calc_MCG_0625", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m", /* pName
                                                                          */
             0 /* checkKind */
 };
@@ -187,7 +187,7 @@ static emlrtRTEInfo d_emlrtRTEI = {
     28,              /* lineNo */
     14,              /* colNo */
     "calc_MCG_0625", /* fName */
-    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m" /* pName
+    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m" /* pName
                                                                             */
 };
 
@@ -201,7 +201,7 @@ static emlrtBCInfo
             "idx_q",         /* aName */
             "calc_MCG_0625", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m", /* pName
                                                                          */
             0 /* checkKind */
 };
@@ -210,7 +210,7 @@ static emlrtRTEInfo e_emlrtRTEI = {
     29,              /* lineNo */
     14,              /* colNo */
     "calc_MCG_0625", /* fName */
-    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m" /* pName
+    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m" /* pName
                                                                             */
 };
 
@@ -224,7 +224,7 @@ static emlrtBCInfo
             "idx_q",         /* aName */
             "calc_MCG_0625", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m", /* pName
                                                                          */
             0 /* checkKind */
 };
@@ -233,7 +233,7 @@ static emlrtRTEInfo f_emlrtRTEI = {
     30,              /* lineNo */
     14,              /* colNo */
     "calc_MCG_0625", /* fName */
-    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m" /* pName
+    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m" /* pName
                                                                             */
 };
 
@@ -247,7 +247,7 @@ static emlrtBCInfo
             "idx_q",         /* aName */
             "calc_MCG_0625", /* fName */
             "F:\\Archive "
-            "\xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m", /* pName
+            "\xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m", /* pName
                                                                          */
             0 /* checkKind */
 };
@@ -256,7 +256,7 @@ static emlrtRTEInfo g_emlrtRTEI = {
     31,              /* lineNo */
     14,              /* colNo */
     "calc_MCG_0625", /* fName */
-    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0625\\Dynamic\\calc_MCG_0625.m" /* pName
+    "F:\\Archive \xe5\xbd\x92\xe6\xa1\xa3\\0626\\Dynamic\\calc_MCG_0625.m" /* pName
                                                                             */
 };
 
@@ -467,8 +467,8 @@ void calc_MCG_0625(const emlrtStack *sp, const struct0_T *LP, struct2_T *SV,
       if (W_d11_idx_0_tmp != (int32_T)muDoubleScalarFloor(W_d11_idx_0_tmp)) {
         emlrtIntegerCheckR2012b(W_d11_idx_0_tmp, &emlrtDCI, (emlrtConstCTX)sp);
       }
-      if (((int8_T)W_d11_idx_0_tmp < 1) || ((int8_T)W_d11_idx_0_tmp > 8)) {
-        emlrtDynamicBoundsCheckR2012b((int8_T)W_d11_idx_0_tmp, 1, 8, &emlrtBCI,
+      if (((int8_T)W_d11_idx_0_tmp < 1) || ((int8_T)W_d11_idx_0_tmp > 11)) {
+        emlrtDynamicBoundsCheckR2012b((int8_T)W_d11_idx_0_tmp, 1, 11, &emlrtBCI,
                                       (emlrtConstCTX)sp);
       }
       tmp_data[i] = (int8_T)W_d11_idx_0_tmp;
@@ -499,8 +499,8 @@ void calc_MCG_0625(const emlrtStack *sp, const struct0_T *LP, struct2_T *SV,
           if (d != (int32_T)muDoubleScalarFloor(d)) {
             emlrtIntegerCheckR2012b(d, &emlrtDCI, &st);
           }
-          if (((int8_T)d < 1) || ((int8_T)d > 8)) {
-            emlrtDynamicBoundsCheckR2012b((int8_T)d, 1, 8, &emlrtBCI, &st);
+          if (((int8_T)d < 1) || ((int8_T)d > 11)) {
+            emlrtDynamicBoundsCheckR2012b((int8_T)d, 1, 11, &emlrtBCI, &st);
           }
           tmp_data[i] = (int8_T)d;
         } else {

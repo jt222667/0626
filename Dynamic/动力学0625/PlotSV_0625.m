@@ -85,7 +85,7 @@ for i = 1:SV.m
 
 end
 if opts.ShowJointFrames
-    draw_joint_frames(ax, LP, SV, opts.FrameScale, opts.ShowFrameLabels);
+    draw_joint_frames(ax, LP, SV, 0.2, opts.ShowFrameLabels);
 end
 
 hold(ax, 'off');
