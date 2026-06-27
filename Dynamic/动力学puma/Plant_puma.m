@@ -26,8 +26,7 @@ sizes.NumInputs      = 6;
 sizes.DirFeedthrough = 0;
 sizes.NumSampleTimes = 1;
 sys = simsizes(sizes);
-% x0  = [0.3 0.3 0.3 0.3 0.3 0.3 0 0 0 0 0 0 ];
-x0  = [0.31 0.31 0.31 0.31 0.31 0.31 0 0 0 0 0 0 ];
+x0  = [0.3 0.3 0.3 0.3 0.3 0.3 0 0 0 0 0 0 ];
 str = [];
 ts  = [0 0];
 end

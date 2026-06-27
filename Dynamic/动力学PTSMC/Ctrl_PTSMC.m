@@ -29,7 +29,7 @@ str = [];
 ts  = [0 0];
 end
 
- 
+
 function sys = mdlOutputs(t,u)
 
 [LP, SV] = get_model_data(false);
@@ -41,11 +41,11 @@ q_A_dot  = u(8:14);
 
 % GUIJI=1正弦轨迹; GUIJI=2多项式轨迹
 % CHOSEN = k, 控制第k关节
-% LIJU=1 前馈控制; LIJU=2 PTSMC控制
+% LIJU=1 前馈控制; LIJU=2 PTSMC控制; LIJU=3 PD+前馈控制
 
 GUIJI = 2
 CHOSEN = 1
-LIJU = 1
+LIJU = 3
 
 %% 轨迹选择
 if GUIJI == 1
@@ -65,18 +65,21 @@ if LIJU == 1
     tau = M*q_D_dot_dot+C+G;
 elseif LIJU == 2
     ptsmc_params = get_ptsmc_params(false);
-    tau = calc_PTSMC_tau( ...
-        LP, SV, q_D, q_D_dot, q_D_dot_dot, q_A, q_A_dot, ptsmc_params);
+    tau = calc_PTSMC_tau(LP, SV, q_D, q_D_dot, q_D_dot_dot, q_A, q_A_dot, ptsmc_params);
+elseif LIJU == 3
+    Kp = 1;
+    Kd = 1;
+    e = q_D - q_A;
+    ed = q_D_dot - q_A_dot;
+    v = q_D_dot_dot + Kd * ed + Kp * e;
+    [M,C,G] = calc_MCG_0625_mex(LP, SV, q_D, q_D_dot);
+    tau = M * v + C + G;
 end
 
 %% 输出
 sys = [tau(:); q_D(:); q_D_dot(:); q_D_dot_dot(:)];
 
 end
-
-
-
-
 
 
 %% 辅助函数

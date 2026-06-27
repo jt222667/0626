@@ -52,7 +52,7 @@ static emlrtBCInfo
     emlrtBCI =
         {
             1,               /* iFirst */
-            8,               /* iLast */
+            11,              /* iLast */
             19,              /* lineNo */
             6,               /* colNo */
             "SV.q",          /* aName */
@@ -467,8 +467,8 @@ void calc_MCG_0625(const emlrtStack *sp, const struct0_T *LP, struct2_T *SV,
       if (W_d11_idx_0_tmp != (int32_T)muDoubleScalarFloor(W_d11_idx_0_tmp)) {
         emlrtIntegerCheckR2012b(W_d11_idx_0_tmp, &emlrtDCI, (emlrtConstCTX)sp);
       }
-      if (((int8_T)W_d11_idx_0_tmp < 1) || ((int8_T)W_d11_idx_0_tmp > 8)) {
-        emlrtDynamicBoundsCheckR2012b((int8_T)W_d11_idx_0_tmp, 1, 8, &emlrtBCI,
+      if (((int8_T)W_d11_idx_0_tmp < 1) || ((int8_T)W_d11_idx_0_tmp > 11)) {
+        emlrtDynamicBoundsCheckR2012b((int8_T)W_d11_idx_0_tmp, 1, 11, &emlrtBCI,
                                       (emlrtConstCTX)sp);
       }
       tmp_data[i] = (int8_T)W_d11_idx_0_tmp;
@@ -499,8 +499,8 @@ void calc_MCG_0625(const emlrtStack *sp, const struct0_T *LP, struct2_T *SV,
           if (d != (int32_T)muDoubleScalarFloor(d)) {
             emlrtIntegerCheckR2012b(d, &emlrtDCI, &st);
           }
-          if (((int8_T)d < 1) || ((int8_T)d > 8)) {
-            emlrtDynamicBoundsCheckR2012b((int8_T)d, 1, 8, &emlrtBCI, &st);
+          if (((int8_T)d < 1) || ((int8_T)d > 11)) {
+            emlrtDynamicBoundsCheckR2012b((int8_T)d, 1, 11, &emlrtBCI, &st);
           }
           tmp_data[i] = (int8_T)d;
         } else {

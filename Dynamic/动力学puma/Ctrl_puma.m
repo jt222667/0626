@@ -31,9 +31,6 @@ q_D  = u(1:6);      % 期望关节位置
 q_D_dot = u(7:12);    % 期望关节速度
 q_D_dot_dot = -q_D;    % 期望关节速度
 
-q_A   = u(13:18);     % 实际关节位置
-q_A_dot  = u(19:24);    % 实际关节速度
-
 %% 前馈
 persistent p560
 if isempty(p560)
