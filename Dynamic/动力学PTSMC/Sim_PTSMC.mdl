@@ -43,8 +43,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2003-05-08T01:06:03Z</dcterms:created>
   <dc:creator>J</dc:creator>
   <cp:lastModifiedBy>J</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-06-27T12:20:25Z</dcterms:modified>
-  <cp:revision>7.30</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-06-27T12:35:46Z</dcterms:modified>
+  <cp:revision>7.31</cp:revision>
   <cp:version>R2025b</cp:version>
 </cp:coreProperties>
 
@@ -115,7 +115,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:7.30&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:7.31&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -165,7 +165,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
     <Array PropName="Components" Type="Simulink.ConfigComponent" Dimension="10*1">
       <Object ObjectID="2" ClassName="Simulink.SolverCC">
         <P Name="StartTime" Class="char">0.0</P>
-        <P Name="StopTime" Class="char">3</P>
+        <P Name="StopTime" Class="char">10</P>
         <P Name="AbsTol" Class="char">auto</P>
         <P Name="AutoScaleAbsTol" Class="char">on</P>
         <P Name="FixedStep" Class="char">0.001</P>
@@ -943,8 +943,8 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
               <P Name="SimMechanicsUnsatisfiedHighPriorityTargets">warning</P>
               <P Name="SimMechanicsUnconnectedGeometryPorts">warning</P>
               <P Name="SimMechanicsCrossSectionNullEdge">warning</P>
-              <P Name="SimMechanicsRigidlyBoundBlock">error</P>
               <P Name="SimMechanicsConflictingReferenceFrames">warning</P>
+              <P Name="SimMechanicsRigidlyBoundBlock">error</P>
               <P Name="SimMechanicsRedundantBlock">warning</P>
               <P Name="SimMechanicsJointTargetOverSpecification">error</P>
               <P Name="SimMechanicsUnconnectedFramePorts">warning</P>
@@ -1126,7 +1126,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <System>
   <P Name="Location">[1706, -7, 3414, 1020]</P>
   <P Name="Open">on</P>
-  <P Name="ZoomFactor">80</P>
+  <P Name="ZoomFactor">71</P>
   <P Name="ReportName">simulink-default.rpt</P>
   <P Name="SIDHighWatermark">181</P>
   <Block BlockType="Clock" Name="Clock" SID="1">
@@ -1618,10 +1618,10 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="IsTabbed" Class="logical">1</P>
           <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
           <P Name="LoadSaveID" Class="char">0</P>
-          <P Name="Extents" Class="double">[2504.0, 1248.0]</P>
-          <P Name="ZoomFactor" Class="double">0.8</P>
-          <P Name="Offset" Class="double">[-190.37785904675195, -254.53373705433091]</P>
-          <P Name="SceneRectInView" Class="double">[-190.37785904675195, -254.53373705433091, 2086.6666666666665, 1039.9999999999998]</P>
+          <P Name="Extents" Class="double">[2504.0, 933.0]</P>
+          <P Name="ZoomFactor" Class="double">0.70833333333333348</P>
+          <P Name="Offset" Class="double">[-325.39746688988896, -254.53373705433091]</P>
+          <P Name="SceneRectInView" Class="double">[-325.39746688988896, -254.53373705433091, 2356.7058823529405, 878.11764705882331]</P>
         </Object>
         <Object ObjectID="6">
           <P Name="IsActive" Class="logical">0</P>
@@ -1661,7 +1661,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAHKAAAEcfwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD8AAAAtQAABHEAAAAAAP////oAAAABAgAAAAL7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAACQAP////sAAABwAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8AYwBoAGEAcAAyAF8AMQBzAGkAbQAAAAAA/////wAAAAAAAAAA+wAAAGAAUwBpAG0AdQBsAGkAbgBrADoARQBkAGkAdABvAHIAOgBSAGUAZgBlAHIAZQBuAGMAZQBkAEYAaQBsAGUAcwAvAFIAZQBmAGUAcgBlAG4AYwBlAGQAIABGAGkAbABlAHMAAAAAAP////8AAADEAP///wAAAAEAAAIGAAAFAPwCAAAAAfwAAAC1AAAFAAAAAAAA/////AEAAAAB+wAAAFQARwBMAFUARQAyADoAUAByAG8AcABlAHIAdAB5AEkAbgBzAHAAZQBjAHQAbwByAC8AUAByAG8AcABlAHIAdAB5ACAASQBuAHMAcABlAGMAdABvAHIAAAAHzgAAAL8AAADgAP///wAAAAMAAAoAAAABNvwBAAAAAvwAAAAAAAAKAAAAAAAA////+v////8BAAAAAPv/////AAAAAAD/////AAADswD///8AAAoAAAAFAAAAAAEAAAACAAAAAQAAAAL8AAAAAA==</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAHKAAAEcfwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD8AAAAtQAABHEAAAAAAP////oAAAABAgAAAAL7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAACQAP////sAAABwAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8AYwBoAGEAcAAyAF8AMQBzAGkAbQAAAAAA/////wAAAAAAAAAA+wAAAGAAUwBpAG0AdQBsAGkAbgBrADoARQBkAGkAdABvAHIAOgBSAGUAZgBlAHIAZQBuAGMAZQBkAEYAaQBsAGUAcwAvAFIAZQBmAGUAcgBlAG4AYwBlAGQAIABGAGkAbABlAHMAAAAAAP////8AAADEAP///wAAAAEAAAIGAAAFAPwCAAAAAfwAAAC1AAAFAAAAAAAA/////AEAAAAB+wAAAFQARwBMAFUARQAyADoAUAByAG8AcABlAHIAdAB5AEkAbgBzAHAAZQBjAHQAbwByAC8AUAByAG8AcABlAHIAdAB5ACAASQBuAHMAcABlAGMAdABvAHIAAAAHzgAAAL8AAADgAP///wAAAAMAAAoAAAABNvwBAAAAAvwAAAAAAAAKAAAAAAAA////+v////8BAAAAAPv/////AQAAAAAAAAoAAAADswD///8AAAoAAAADxQAAAAEAAAACAAAAAQAAAAL8AAAAAA==</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">4eb04489-d5bd-4670-b17a-8f2447fad6b7</P>
     </Object>
