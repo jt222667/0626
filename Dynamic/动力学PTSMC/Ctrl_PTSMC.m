@@ -1,5 +1,4 @@
 function [sys,x0,str,ts] = Ctrl_PTSMC(t,x,u,flag)
-%CHAP2_1CTRL 7 自由度关节空间 computed-torque PD 控制器
 
 switch flag
     case 0
@@ -30,49 +29,54 @@ str = [];
 ts  = [0 0];
 end
 
-%%
+ 
 function sys = mdlOutputs(t,u)
+
 [LP, SV] = get_model_data(false);
 q_D = zeros(7,1);
 q_D_dot = zeros(7,1);
 q_D_dot_dot = zeros(7,1);
-q_A   = u(1:7);       % 实际关节位置
-q_A_dot  = u(8:14);   % 实际关节速度
+q_A   = u(1:7);
+q_A_dot  = u(8:14);
 
+% GUIJI=1正弦轨迹; GUIJI=2多项式轨迹
+% CHOSEN = k, 控制第k关节
+% LIJU=1 前馈控制; LIJU=2 PTSMC控制
+
+GUIJI = 2
 CHOSEN = 1
+LIJU = 1
 
-A = pi/2;
-q_D(CHOSEN) = A *sin(t);
-q_D_dot(CHOSEN) = A *cos(t);
-q_D_dot_dot(CHOSEN) = -A *sin(t);
-
-
-A = pi/2;
-q_D(2) = A *sin(t);
-q_D_dot(2) = A *cos(t);
-q_D_dot_dot(2) = -A *sin(t);
-
-q_D(3) = A *sin(t);
-q_D_dot(3) = A *cos(t);
-q_D_dot_dot(3) = -A *sin(t);
-
-q_D(4) = A *sin(t);
-q_D_dot(4) = A *cos(t);
-q_D_dot_dot(4) = -A *sin(t);
-
-q_D(5) = A *sin(t);
-q_D_dot(5) = A *cos(t);
-q_D_dot_dot(5) = -A *sin(t);
-
-q_D(6) = A *sin(t);
-q_D_dot(6) = A *cos(t);
-q_D_dot_dot(6) = -A *sin(t);
-
-ptsmc_params = get_ptsmc_params(false);
-tau = calc_PTSMC_tau( ...
-    LP, SV, q_D, q_D_dot, q_D_dot_dot, q_A, q_A_dot, ptsmc_params);
-sys = [tau(:); q_D(:); q_D_dot(:); q_D_dot_dot(:)];
+%% 轨迹选择
+if GUIJI == 1
+    A = pi/2;
+    q_D(CHOSEN) = A *sin(t);
+    q_D_dot(CHOSEN) = A *cos(t);
+    q_D_dot_dot(CHOSEN) = -A *sin(t);
+elseif GUIJI == 2
+    q0 = 0;T = 3;
+    [q_D(CHOSEN), q_D_dot(CHOSEN), q_D_dot_dot(CHOSEN)] = quintic_traj_0625(t, q0, 2.7533, T);
 end
+
+
+%% 力矩计算
+if LIJU == 1
+    [M,C,G] = calc_MCG_0625_mex(LP, SV, q_D, q_D_dot);
+    tau = M*q_D_dot_dot+C+G;
+elseif LIJU == 2
+    ptsmc_params = get_ptsmc_params(false);
+    tau = calc_PTSMC_tau( ...
+        LP, SV, q_D, q_D_dot, q_D_dot_dot, q_A, q_A_dot, ptsmc_params);
+end
+
+%% 输出
+sys = [tau(:); q_D(:); q_D_dot(:); q_D_dot_dot(:)];
+
+end
+
+
+
+
 
 
 %% 辅助函数

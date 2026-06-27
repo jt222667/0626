@@ -29,10 +29,10 @@ sizes.DirFeedthrough = 0;
 sizes.NumSampleTimes = 1;
 sys = simsizes(sizes);
 
-CHOSEN = 1
+% CHOSEN = 1
 
 x0  = [0 0 0 0 0 0 0 0 0 0 0 0 0 0];
-x0(CHOSEN+7) = pi/2;
+% x0(CHOSEN+7) = pi/2;
 str = [];
 ts  = [0 0];
 end
@@ -45,12 +45,13 @@ q   = x(1:7);
 qd  = x(8:14);
 tau = u(1:7);
 
-[M_plant,C_plant,G_plant] = get_dynamics(LP, SV, q, qd);
+[M_plant,C_plant,G_plant] = calc_MCG_0625_mex(LP, SV, q, qd);
 
-Dist = 1.1
+Dist = 1
 
 qdd = Dist * M_plant \ (tau -  Dist * C_plant -  Dist * G_plant);
 sys = [qd; qdd];
+
 end
 
 function sys = mdlOutputs(x)
@@ -71,21 +72,3 @@ LP = LP_cache;
 SV = SV_cache;
 end
 
-function [M, C, G] = get_dynamics(LP, SV, q, qd)
-persistent use_mex
-if isempty(use_mex)
-    use_mex = true;
-end
-if use_mex
-    try
-        [M, C, G] = calc_MCG_0625_mex(LP, SV, q, qd);
-        return;
-    catch ME
-        use_mex = false;
-        warning('Plant_0625:MexFallback', ...
-            ['calc_MCG_0625_mex failed for the current LP/SV size. ', ...
-            'Falling back to calc_MCG_0625. Original error: %s'], ME.message);
-    end
-end
-[M, C, G] = calc_MCG_0625(LP, SV, q, qd);
-end
