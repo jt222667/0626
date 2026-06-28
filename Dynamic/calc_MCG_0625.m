@@ -10,11 +10,6 @@ rb = LP.rb;
 q0  = q0(:);
 qd0 = qd0(:);
 
-if isscalar(q0)
-    q0  = q0  * ones(LP.num_joint,1);
-    qd0 = qd0 * ones(LP.num_joint,1);
-end
-
 %% 当前构型运动学
 SV.q(idx_q) = q0;
 SV = calc_aa_0318(LP, SV);
@@ -233,6 +228,6 @@ for dyn_case = 1:9
 end
 
 %% 质量矩阵强制对称化
-M = 0.5*(M + M.');
+% M = 0.5*(M + M.');
 
 end

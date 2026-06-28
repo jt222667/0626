@@ -45,7 +45,7 @@ q_A_dot  = u(8:14);
 
 GUIJI = 2
 CHOSEN = 1
-LIJU = 3
+LIJU = 1
 
 %% 轨迹选择
 if GUIJI == 1
@@ -54,8 +54,16 @@ if GUIJI == 1
     q_D_dot(CHOSEN) = A *cos(t);
     q_D_dot_dot(CHOSEN) = -A *sin(t);
 elseif GUIJI == 2
-    q0 = 0;T = 3;
+    q0 = 0;T = 20;
     [q_D(CHOSEN), q_D_dot(CHOSEN), q_D_dot_dot(CHOSEN)] = quintic_traj_0625(t, q0, 2.7533, T);
+    [q_D(2), q_D_dot(2), q_D_dot_dot(2)] = quintic_traj_0625(t, q0, 2.7533, T);
+    [q_D(3), q_D_dot(3), q_D_dot_dot(3)] = quintic_traj_0625(t, q0, 2.7533, T);
+    [q_D(4), q_D_dot(4), q_D_dot_dot(4)] = quintic_traj_0625(t, q0, 2.7533, T);
+    [q_D(5), q_D_dot(5), q_D_dot_dot(5)] = quintic_traj_0625(t, q0, 2.7533, T);
+    [q_D(6), q_D_dot(6), q_D_dot_dot(6)] = quintic_traj_0625(t, q0, 2.7533, T);
+    [q_D(7), q_D_dot(7), q_D_dot_dot(7)] = quintic_traj_0625(t, q0, 2.7533, T);
+
+
 end
 
 

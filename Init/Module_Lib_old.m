@@ -1,6 +1,6 @@
 %% 模块库初始化函数，生成模块参数结构体RP_data
 
-function RP_data = Module_Lib()
+function RP_data = Module_Lib_old()
 % 参数初始化
 syms theta d a alf;
 
@@ -249,7 +249,19 @@ RP_data.J_type = J_type;
 RP_data.T_L = T_L;
 RP_data.T_B = T_B;
 
-%% 动力学参数
+
+
+%% Dynamic parameters, modules 1-7.
+% Convention: all inertia tensors are centroidal inertias of the
+% corresponding prox/dist/link part, expressed in that module local frame.
+rho_al = 2700;       % kg/m^3, aluminum alloy
+r_outer = 0.100;     % m, 20 cm outer diameter
+wall = 0.005;        % m
+r_inner = r_outer - wall;
+motor_m = 1.000;     % kg, one motor per joint module
+motor_r = 0.060;     % m, compact motor envelope inside the 20 cm shell
+motor_l = 0.100;     % m
+
 mass = zeros(1,7);
 COM = zeros(3,7);
 Inertia = zeros(3,3,7);
@@ -259,174 +271,51 @@ COM_prox = zeros(3,4);
 COM_dist = zeros(3,4);
 Inertia_prox = zeros(3,3,4);
 Inertia_dist = zeros(3,3,4);
-% S = @(v) (norm(v)^2 * eye(3) - v * v.');
 
-%% -----------------------------------M1-----------------------------------
-% M1 prox
-m1_prox = 3.283;
-rc1_prox = [0; 0; 0.142];
-I1_prox_c = [
-    0.022  0      0;
-    0      0.022  0;
-    0      0      0.021];
-I1_prox_o = [
-    0.088  0      0;
-    0      0.088  0;
-    0      0      0.021];
-% I1_prox_o_confirm = I1_prox_c + m1_prox * S(rc1_prox);
+% Joint modules: aluminum hollow tube shell plus a compact 1 kg motor in prox.
+[mass_prox(1), COM_prox(:,1), Inertia_prox(:,:,1)] = assemble_part({ ...
+    hollow_cylinder_segment([0;0;0], [0;0;0.2], rho_al, r_outer, r_inner), ...
+    solid_cylinder_component([0;0;0.1], [0;0;1], motor_m, motor_r, motor_l)});
+[mass_dist(1), COM_dist(:,1), Inertia_dist(:,:,1)] = assemble_part({ ...
+    hollow_cylinder_segment([0;0;0], [0;0;0.2], rho_al, r_outer, r_inner)});
 
-% M1 dist
-m1_dist = 3.283;
-rc1_dist = [0; 0; 0.058];
-I1_dist_c = [
-    0.022  0      0;
-    0      0.022  0;
-    0      0      0.021];
-I1_dist_o = [
-    0.033  0      0;
-    0      0.033  0;
-    0      0      0.021];
+[mass_prox(2), COM_prox(:,2), Inertia_prox(:,:,2)] = assemble_part({ ...
+    hollow_cylinder_segment([0;0;0], [0;0;0.2], rho_al, r_outer, r_inner), ...
+    solid_cylinder_component([0;0;0.1], [0;0;1], motor_m, motor_r, motor_l)});
+[mass_dist(2), COM_dist(:,2), Inertia_dist(:,:,2)] = assemble_part({ ...
+    hollow_cylinder_segment([0;0;0], [0;-0.2;0], rho_al, r_outer, r_inner)});
 
-% I1_dist_o_confirm = I1_dist_c + m1_dist * S(rc1_dist);
+[mass_prox(3), COM_prox(:,3), Inertia_prox(:,:,3)] = assemble_part({ ...
+    hollow_cylinder_segment([0;0;0], [0;0;0.2], rho_al, r_outer, r_inner), ...
+    hollow_cylinder_segment([0;0;0.2], [0;0.1;0.2], rho_al, r_outer, r_inner), ...
+    solid_cylinder_component([0;0;0.1], [0;0;1], motor_m, motor_r, motor_l)});
+[mass_dist(3), COM_dist(:,3), Inertia_dist(:,:,3)] = assemble_part({ ...
+    hollow_cylinder_segment([0;0;0], [0;0;0.1], rho_al, r_outer, r_inner)});
 
-%% -----------------------------------M2-----------------------------------
-% M2 prox
-m2_prox = 3.283;
-rc2_prox = [0; 0; 0.142];
-I2_prox_c = [
-    0.022  0      0;
-    0      0.022  0;
-    0      0      0.021];
-I2_prox_o = [
-    0.088  0      0;
-    0      0.088  0;
-    0      0      0.021];
-% I2_prox_o_confirm = I2_prox_c + m2_prox * S(rc2_prox);
+[mass_prox(4), COM_prox(:,4), Inertia_prox(:,:,4)] = assemble_part({ ...
+    hollow_cylinder_segment([0;0;0], [0;0;0.2], rho_al, r_outer, r_inner), ...
+    hollow_cylinder_segment([0;0;0.2], [0;-0.2;0.2], rho_al, r_outer, r_inner), ...
+    solid_cylinder_component([0;0;0.1], [0;0;1], motor_m, motor_r, motor_l)});
+[mass_dist(4), COM_dist(:,4), Inertia_dist(:,:,4)] = assemble_part({ ...
+    hollow_cylinder_segment([0;0;0], [0;0;0.1], rho_al, r_outer, r_inner), ...
+    hollow_cylinder_segment([0;0;0.1], [0;0.2;0.1], rho_al, r_outer, r_inner)});
 
-% M2 dist
-m2_dist = 3.283;
-rc2_dist = [0; -0.058; 0];
-I2_dist_c = [
-    0.022  0      0;
-    0      0.021  0;
-    0      0      0.022];
-I2_dist_o = [
-    0.033  0      0;
-    0      0.021  0;
-    0      0      0.033];
-% I2_dist_o_confirm = I2_dist_c + m2_dist * S(rc2_dist);
+for k = 1:4
+    mass(k) = mass_prox(k) + mass_dist(k);
+end
 
-%% -----------------------------------M3-----------------------------------
-% M3 prox
-m3_prox = 3.910;
-rc3_prox = [0; 0.031; 0.168];
-I3_prox_c = [
-    0.041   0       0;
-    0     0.038   -0.004;
-    0     -0.004   0.033];
-I3_prox_o = [
-    0.156   0       0;
-    0     0.149   -0.024;
-    0     -0.024   0.037];
-% I3_prox_o_confirm = I3_prox_c + m3_prox * S(rc3_prox);
+% Link modules: uniform-density aluminum hollow tubes following the module path.
+[mass(5), COM(:,5), Inertia(:,:,5)] = assemble_part({ ...
+    hollow_cylinder_segment([0;0;0], [0;0;0.4], rho_al, r_outer, r_inner)});
 
-% M3 dist
-m3_dist = 2.456;
-rc3_dist = [0; 0; 0.027];
-I3_dist_c = [
-    0.008  0      0;
-    0      0.008  0;
-    0      0      0.013];
-I3_dist_o = [
-    0.010  0      0;
-    0      0.010  0;
-    0      0      0.013];
-% I3_dist_o_confirm = I3_dist_c + m3_dist * S(rc3_dist);
+[mass(6), COM(:,6), Inertia(:,:,6)] = assemble_part({ ...
+    hollow_cylinder_segment([0;0;0], [0;0;0.2], rho_al, r_outer, r_inner), ...
+    hollow_cylinder_segment([0;0;0.2], [0;0.2;0.2], rho_al, r_outer, r_inner)});
 
-%% -----------------------------------M4-----------------------------------
-% M4 prox
-m4_prox = 4.822;
-rc4_prox = [0.001; -0.085; 0.174];
-I4_prox_c = [
-    0.079   0       0;
-    0       0.048   0.011;
-    0       0.011   0.070];
-I4_prox_o = [
-    0.260   0.001  -0.001;
-    0.001   0.194   0.082;
-   -0.001   0.082   0.105];
-% I4_prox_o_confirm = I4_prox_c + m4_prox * S(rc4_prox);
-
-% M4 dist
-m4_dist = 3.910;
-rc4_dist = [0; 0.027; 0.135];
-I4_dist_c = [
-    0.041  0      0;
-    0      0.031  0.004;
-    0      0.004  0.040];
-I4_dist_o = [
-    0.116  0       0;
-    0      0.103  -0.011;
-    0     -0.011   0.043];
-% I4_dist_o_confirm = I4_dist_c + m4_dist * S(rc4_dist);
-
-
-%% -----------------------------------M5-----------------------------------
-m5 = 3.308;
-rc5 = [0; 0; 0.200];
-I5_c = [
-    0.060  0      0;
-    0      0.060  0;
-    0      0      0.031];
-I5_o = [
-    0.192  0      0;
-    0      0.192  0;
-    0      0      0.031];
-% I5_o_confirm = I5_c + m5 * S(rc5);
-
-%% -----------------------------------M6-----------------------------------
-m6 = 2.835;
-rc6 = [0; 0.052; 0.148];
-I6_c = [
-    0.039  0       0;
-    0      0.033  -0.009;
-    0     -0.009   0.033];
-I6_o = [
-    0.108  0       0;
-    0      0.095  -0.031;
-    0     -0.031   0.041];
-% I6_o_confirm = I6_c + m6 * S(rc6);
-
-%% -----------------------------------M7-----------------------------------
-m7 = 3.308;
-rc7 = [0; 0.026; 0.189];
-I7_c = [
-    0.057   0       0;
-    0       0.052  -0.008;
-    0      -0.008   0.036];
-I7_o = [
-    0.178   0       0;
-    0       0.171  -0.024;
-    0      -0.024   0.039];
-% I7_o_confirm = I7_c + m7 * S(rc7);
-
-%% 参数归纳
-mass_prox(1) = m1_prox; mass_dist(1) = m1_dist;
-mass_prox(2) = m2_prox; mass_dist(2) = m2_dist;
-mass_prox(3) = m3_prox; mass_dist(3) = m3_dist;
-mass_prox(4) = m4_prox; mass_dist(4) = m4_dist;
-COM_prox(:,1) = rc1_prox; COM_dist(:,1) = rc1_dist;
-COM_prox(:,2) = rc2_prox; COM_dist(:,2) = rc2_dist;
-COM_prox(:,3) = rc3_prox; COM_dist(:,3) = rc3_dist;
-COM_prox(:,4) = rc4_prox; COM_dist(:,4) = rc4_dist;
-Inertia_prox(:,:,1) = I1_prox_o; Inertia_dist(:,:,1) = I1_dist_o;
-Inertia_prox(:,:,2) = I2_prox_o; Inertia_dist(:,:,2) = I2_dist_o;
-Inertia_prox(:,:,3) = I3_prox_o; Inertia_dist(:,:,3) = I3_dist_o;
-Inertia_prox(:,:,4) = I4_prox_o; Inertia_dist(:,:,4) = I4_dist_o;
-
-mass(5) = m5; COM(:,5) = rc5; Inertia(:,:,5) = I5_o;
-mass(6) = m6; COM(:,6) = rc6; Inertia(:,:,6) = I6_o;
-mass(7) = m7; COM(:,7) = rc7; Inertia(:,:,7) = I7_o;
+bend45 = 0.2 / sqrt(2);
+[mass(7), COM(:,7), Inertia(:,:,7)] = assemble_part({ ...
+    hollow_cylinder_segment([0;0;0], [0;0;0.2], rho_al, r_outer, r_inner), ...
+    hollow_cylinder_segment([0;0;0.2], [0;bend45;0.2+bend45], rho_al, r_outer, r_inner)});
 
 RP_data.mass = mass;
 RP_data.COM = COM;
@@ -438,5 +327,47 @@ RP_data.COM_dist = COM_dist;
 RP_data.Inertia_prox = Inertia_prox;
 RP_data.Inertia_dist = Inertia_dist;
 
+end
+
+function body = hollow_cylinder_segment(p0, p1, rho, ro, ri)
+L = norm(p1 - p0);
+u = (p1 - p0) / L;
+m = rho * pi * (ro^2 - ri^2) * L;
+I_axis = 0.5 * m * (ro^2 + ri^2);
+I_trans = (m / 12) * (3 * (ro^2 + ri^2) + L^2);
+body.m = m;
+body.c = (p0 + p1) / 2;
+body.I = inertia_from_axis(u, I_axis, I_trans);
+end
+
+function body = solid_cylinder_component(center, axis, m, r, L)
+u = axis / norm(axis);
+I_axis = 0.5 * m * r^2;
+I_trans = (m / 12) * (3 * r^2 + L^2);
+body.m = m;
+body.c = center;
+body.I = inertia_from_axis(u, I_axis, I_trans);
+end
+
+function I = inertia_from_axis(u, I_axis, I_trans)
+I = I_trans * eye(3) + (I_axis - I_trans) * (u * u.');
+I = (I + I.') / 2;
+end
+
+function [m, c, I] = assemble_part(parts)
+m = 0;
+c = zeros(3,1);
+for i = 1:numel(parts)
+    m = m + parts{i}.m;
+    c = c + parts{i}.m * parts{i}.c;
+end
+c = c / m;
+S = @(v) (norm(v)^2 * eye(3) - v * v.');
+I = zeros(3);
+for i = 1:numel(parts)
+    d = parts{i}.c - c;
+    I = I + parts{i}.I + parts{i}.m * S(d);
+end
+I = (I + I.') / 2;
 end
 
