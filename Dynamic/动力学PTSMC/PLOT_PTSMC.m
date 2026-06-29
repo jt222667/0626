@@ -39,7 +39,7 @@ figure(3)
 box on;
 hold on
 for i = 1:7
-    plot(t, tol(:, i), 'LineWidth', 2)
+    plot(t, tau(:, i), 'LineWidth', 2)
 end
 hold off
 grid on

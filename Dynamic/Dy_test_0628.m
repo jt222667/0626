@@ -16,3 +16,6 @@ rb(LP.num_joint) = struct('m', [], 'rc', [], 'I', []);
 for i = 1:LP.num_joint-1
     [rb(i).m, rb(i).rc, rb(i).I] = calc_rigid_body_params_0625(sub_module{i}, sub_align{i}, RP_data);
 end
+
+
+

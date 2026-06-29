@@ -26,5 +26,4 @@ function [rc_ref, I_ref] = Dy_Trans(~, rc_local, I_local, R, P)
 
     % (2) 输入惯量已经是质心惯量，这里只做坐标姿态变换
     I_ref = R * I_local * R.';
-    I_ref = (I_ref + I_ref.') / 2;
 end

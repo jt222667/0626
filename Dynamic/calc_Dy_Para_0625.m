@@ -11,5 +11,4 @@ module_end = LP.module(end);
 rb(end).m = LP.module_mass_dist(module_end);
 rb(end).rc = LP.module_COM_dist(:,module_end);
 rb(end).I = LP.module_inertia_dist(:,:,module_end);
-
 end

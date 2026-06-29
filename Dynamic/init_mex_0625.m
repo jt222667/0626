@@ -1,7 +1,7 @@
 clc;clear;
-RP_data = Module_Lib_old();
+RP_data = Module_Lib();
 
-GOUXING = 1
+GOUXING = 2
 
 %% 随机构型生成
 if GOUXING == 1
@@ -33,10 +33,33 @@ rb = calc_Dy_Para_0625(LP, RP_data);
 LP.rb = rb;
 
 %% mex生成
-q = 0.3 * ones(LP.num_joint, 1); 
-qd = zeros(LP.num_joint, 1); 
+target_dir = 'F:\Archive 归档\0626\Dynamic';
 
-codegen calc_MCG_0625 ...
+if ~isfolder(target_dir)
+    mkdir(target_dir);
+end
+
+addpath(genpath(target_dir));
+addpath(target_dir, '-begin');
+
+old_dir = pwd;
+cleanup = onCleanup(@() cd(old_dir));
+cd(target_dir);
+
+source_file = which('calc_MCG_0625');
+fprintf('Using source: %s\n', source_file);
+
+if isempty(source_file)
+    error('找不到 calc_MCG_0625.m，请确认它在 Dynamic 文件夹或其子文件夹下。');
+end
+
+q  = 0.3 * ones(LP.num_joint, 1);
+qd = zeros(LP.num_joint, 1);
+
+cfg = coder.config('mex');
+cfg.GenerateReport = true;
+
+codegen -config cfg calc_MCG_0625 ...
     -args {LP, SV, q, qd} ...
     -o calc_MCG_0625_mex ...
     -report

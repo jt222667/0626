@@ -56,19 +56,17 @@ if num_module == 3
     [rc2_1, I2_1] = Dy_Trans(m_2, rc_2, I_2, R12, P12);
     [rc3_1, I3_1] = Dy_Trans(m_3, rc_3, I_3, R13, P13);
     rc_all = (m_1 * rc1_1 + m_2 * rc2_1 + m_3 * rc3_1) / m_all;
-    I_all  = I1_1 + m_1 * S( - rc_all) ...
-           + I2_1 + m_2 * S(P12 - rc_all) ...
-           + I3_1 + m_3 * S(P13 - rc_all);
+    I_all  = I1_1 + m_1 * S(rc1_1 - rc_all) ...
+           + I2_1 + m_2 * S(rc2_1 - rc_all) ...
+           + I3_1 + m_3 * S(rc3_1 - rc_all);
 else
     m_all = m_1 + m_2;
     rc1_1 = rc_1;
     I1_1 = I_1;
     [rc2_1, I2_1] = Dy_Trans(m_2, rc_2, I_2, R12, P12);
     rc_all = (m_1 * rc1_1 + m_2 * rc2_1) / m_all;
-    I_all  = I1_1 + m_1 * S( - rc_all) ...
-           + I2_1 + m_2 * S(P12 - rc_all);
+    I_all  = I1_1 + m_1 * S(rc1_1 - rc_all) ...
+           + I2_1 + m_2 * S(rc2_1 - rc_all);
 end
-
-I_all = (I_all + I_all.') / 2;
 
 end

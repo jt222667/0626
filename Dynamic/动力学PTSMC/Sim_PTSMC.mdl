@@ -43,8 +43,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2003-05-08T01:06:03Z</dcterms:created>
   <dc:creator>J</dc:creator>
   <cp:lastModifiedBy>J</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-06-28T06:15:18Z</dcterms:modified>
-  <cp:revision>7.33</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-06-28T11:55:16Z</dcterms:modified>
+  <cp:revision>7.36</cp:revision>
   <cp:version>R2025b</cp:version>
 </cp:coreProperties>
 
@@ -115,7 +115,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:7.33&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:7.36&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="LibraryLinkDisplay">none</P>
@@ -165,7 +165,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
     <Array PropName="Components" Type="Simulink.ConfigComponent" Dimension="10*1">
       <Object ObjectID="2" ClassName="Simulink.SolverCC">
         <P Name="StartTime" Class="char">0.0</P>
-        <P Name="StopTime" Class="char">20</P>
+        <P Name="StopTime" Class="char">10</P>
         <P Name="AbsTol" Class="char">auto</P>
         <P Name="AutoScaleAbsTol" Class="char">on</P>
         <P Name="FixedStep" Class="char">0.001</P>
@@ -941,14 +941,14 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
               <P Name="Components" Class="double">[]</P>
               <P Name="DisabledProps" Class="double">[]</P>
               <P Name="SimMechanicsConflictingReferenceFrames">warning</P>
-              <P Name="SimMechanicsRigidlyBoundBlock">error</P>
-              <P Name="SimMechanicsRedundantBlock">warning</P>
-              <P Name="SimMechanicsJointTargetOverSpecification">error</P>
-              <P Name="SimMechanicsInvalidVisualProperty">warning</P>
-              <P Name="SimMechanicsUnconnectedGeometryPorts">warning</P>
-              <P Name="SimMechanicsUnconnectedFramePorts">warning</P>
-              <P Name="SimMechanicsCrossSectionNullEdge">warning</P>
               <P Name="SimMechanicsUnsatisfiedHighPriorityTargets">warning</P>
+              <P Name="SimMechanicsCrossSectionNullEdge">warning</P>
+              <P Name="SimMechanicsUnconnectedGeometryPorts">warning</P>
+              <P Name="SimMechanicsJointTargetOverSpecification">error</P>
+              <P Name="SimMechanicsRigidlyBoundBlock">error</P>
+              <P Name="SimMechanicsInvalidVisualProperty">warning</P>
+              <P Name="SimMechanicsRedundantBlock">warning</P>
+              <P Name="SimMechanicsUnconnectedFramePorts">warning</P>
             </Object>
             <Object ObjectID="16" ClassName="simmechanics.ExplorerConfigSet">
               <P Name="Description" Class="char">Explorer</P>
@@ -962,23 +962,23 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
           <P Name="DisabledProps" Class="double">[]</P>
         </Object>
         <P Name="DisabledProps" Class="double">[]</P>
-        <P Name="SimscapeLogName">simlog</P>
-        <P Name="SimscapeNominalValues">[{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;A&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;bar&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;cm^2&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;cm^3/s&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;kJ/kg&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;kW&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;l&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;N&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;N*m&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;V&quot;}]</P>
-        <P Name="SimscapeLogType">none</P>
-        <P Name="ExplicitSolverDiagnosticOptions">warning</P>
-        <P Name="SimscapeLogDecimation">1</P>
-        <P Name="SimscapeLogOpenViewer">off</P>
-        <P Name="SelectedTab"/>
-        <P Name="SimscapeCompileComponentReuse">off</P>
         <P Name="SimscapeLogSimulationStatistics">off</P>
-        <P Name="SimscapeLogToSDI">off</P>
-        <P Name="SimscapeOperatingPoint"/>
+        <P Name="SimscapeLogType">none</P>
         <P Name="SimscapeNormalizeSystem">on</P>
         <P Name="SimscapeLogDataHistory">5000</P>
-        <P Name="EditingMode">Full</P>
-        <P Name="GlobalZcOffDiagnosticOptions">warning</P>
-        <P Name="SimscapeLogLimitData">on</P>
+        <P Name="SimscapeOperatingPoint"/>
+        <P Name="SimscapeLogToSDI">off</P>
+        <P Name="SimscapeLogOpenViewer">off</P>
+        <P Name="SimscapeCompileComponentReuse">off</P>
+        <P Name="SimscapeLogDecimation">1</P>
         <P Name="SimscapeUseOperatingPoints">off</P>
+        <P Name="SelectedTab"/>
+        <P Name="SimscapeNominalValues">[{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;A&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;bar&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;cm^2&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;cm^3/s&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;kJ/kg&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;kW&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;l&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;N&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;N*m&quot;},{&quot;value&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;V&quot;}]</P>
+        <P Name="SimscapeLogName">simlog</P>
+        <P Name="GlobalZcOffDiagnosticOptions">warning</P>
+        <P Name="ExplicitSolverDiagnosticOptions">warning</P>
+        <P Name="SimscapeLogLimitData">on</P>
+        <P Name="EditingMode">Full</P>
       </Object>
     </Array>
     <P Name="DisabledProps" Class="double">[]</P>
@@ -1126,7 +1126,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <System>
   <P Name="Location">[1706, -7, 3414, 1020]</P>
   <P Name="Open">on</P>
-  <P Name="ZoomFactor">60</P>
+  <P Name="ZoomFactor">85</P>
   <P Name="ReportName">simulink-default.rpt</P>
   <P Name="SIDHighWatermark">181</P>
   <Block BlockType="Clock" Name="Clock" SID="1">
@@ -1341,11 +1341,11 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="MaxDataPoints">inf</P>
     <P Name="SampleTime">-1</P>
   </Block>
-  <Block BlockType="ToWorkspace" Name="tol" SID="8">
+  <Block BlockType="ToWorkspace" Name="tau" SID="8">
     <PortCounts in="1"/>
     <P Name="Position">[500, 76, 540, 104]</P>
     <P Name="ZOrder">-8</P>
-    <P Name="VariableName">tol</P>
+    <P Name="VariableName">tau</P>
     <P Name="MaxDataPoints">inf</P>
     <P Name="SampleTime">-1</P>
   </Block>
@@ -1619,9 +1619,9 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
           <P Name="LoadSaveID" Class="char">0</P>
           <P Name="Extents" Class="double">[2504.0, 933.0]</P>
-          <P Name="ZoomFactor" Class="double">0.6</P>
-          <P Name="Offset" Class="double">[-295.81388536341797, -395.31036683192474]</P>
-          <P Name="SceneRectInView" Class="double">[-295.81388536341797, -395.31036683192474, 2782.2222222222226, 1036.6666666666667]</P>
+          <P Name="ZoomFactor" Class="double">0.84704472843450473</P>
+          <P Name="Offset" Class="double">[-302.66336994320454, -261.50886086120931]</P>
+          <P Name="SceneRectInView" Class="double">[-302.66336994320454, -261.50886086120931, 1970.7735344963069, 734.31777463460628]</P>
         </Object>
         <Object ObjectID="6">
           <P Name="IsActive" Class="logical">0</P>

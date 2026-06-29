@@ -21,7 +21,7 @@ filename = ['robot_motion_', msg, 's.gif'];
 
 opts.OutputFile = fullfile(fileparts(mfilename('fullpath')), filename);
 opts.FrameStep = [];
-opts.FrameRate = 10;
+opts.FrameRate = 30;
 opts.PlaybackSpeed = 5;
 opts.MaxFrames = 1800;
 opts.LoopCount = 1;

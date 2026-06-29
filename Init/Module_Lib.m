@@ -259,7 +259,7 @@ COM_prox = zeros(3,4);
 COM_dist = zeros(3,4);
 Inertia_prox = zeros(3,3,4);
 Inertia_dist = zeros(3,3,4);
-% S = @(v) (norm(v)^2 * eye(3) - v * v.');
+S = @(v) (norm(v)^2 * eye(3) - v * v.');
 
 %% -----------------------------------M1-----------------------------------
 % M1 prox
@@ -419,14 +419,14 @@ COM_prox(:,1) = rc1_prox; COM_dist(:,1) = rc1_dist;
 COM_prox(:,2) = rc2_prox; COM_dist(:,2) = rc2_dist;
 COM_prox(:,3) = rc3_prox; COM_dist(:,3) = rc3_dist;
 COM_prox(:,4) = rc4_prox; COM_dist(:,4) = rc4_dist;
-Inertia_prox(:,:,1) = I1_prox_o; Inertia_dist(:,:,1) = I1_dist_o;
-Inertia_prox(:,:,2) = I2_prox_o; Inertia_dist(:,:,2) = I2_dist_o;
-Inertia_prox(:,:,3) = I3_prox_o; Inertia_dist(:,:,3) = I3_dist_o;
-Inertia_prox(:,:,4) = I4_prox_o; Inertia_dist(:,:,4) = I4_dist_o;
+Inertia_prox(:,:,1) = I1_prox_c; Inertia_dist(:,:,1) = I1_dist_c;
+Inertia_prox(:,:,2) = I2_prox_c; Inertia_dist(:,:,2) = I2_dist_c;
+Inertia_prox(:,:,3) = I3_prox_c; Inertia_dist(:,:,3) = I3_dist_c;
+Inertia_prox(:,:,4) = I4_prox_c; Inertia_dist(:,:,4) = I4_dist_c;
 
-mass(5) = m5; COM(:,5) = rc5; Inertia(:,:,5) = I5_o;
-mass(6) = m6; COM(:,6) = rc6; Inertia(:,:,6) = I6_o;
-mass(7) = m7; COM(:,7) = rc7; Inertia(:,:,7) = I7_o;
+mass(5) = m5; COM(:,5) = rc5; Inertia(:,:,5) = I5_c;
+mass(6) = m6; COM(:,6) = rc6; Inertia(:,:,6) = I6_c;
+mass(7) = m7; COM(:,7) = rc7; Inertia(:,:,7) = I7_c;
 
 RP_data.mass = mass;
 RP_data.COM = COM;

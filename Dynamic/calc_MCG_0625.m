@@ -12,8 +12,7 @@ qd0 = qd0(:);
 
 %% 当前构型运动学
 SV.q(idx_q) = q0;
-SV = calc_aa_0318(LP, SV);
-SV = calc_pos_0318(LP, SV);
+SV = Trans_aa_pos_ori(LP,SV,q0);
 
 %% 绝对姿态矩阵
 R0 = eye(3);
